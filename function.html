@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //print all odd numbers in an array
+
+        //named or normal function
+
+        var array= [1,2,3,4,5,6,7,8,9];
+
+        function odd(){
+            var result = array.filter(number => number%2!=0)
+            return result;
+        }
+        console.log(odd());
+
+        //anonymous function
+        
+        var odd = function (){
+            var result = array.filter(number => number%2!=0)
+            return result;
+        }
+        console.log(odd());
+
+      //IIFE using for loop
+      //syntax for IIFE: (function functionname(){})();
+
+        (function odd(){
+            for(var i=0; i<array.length; i++){
+                if (array[i]%2!=0)
+                console.log(array[i])
+            }
+        })
+        ();
+
+        
+//arrow function
+//syntax: variable name = () => {return};
+
+var oddNumber = ()=>{
+            for(var i=0; i<array.length; i++){
+                if (array[i]%2!=0)
+                console.log(array[i])
+            }
+        }
+oddNumber(array);
+        
+    </script>
+</body>
+</html>
